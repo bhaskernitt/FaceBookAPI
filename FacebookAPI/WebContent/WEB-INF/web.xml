@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FacebookAPI</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>RequestServlet</servlet-name>
+    <servlet-class>com.bhaskerStreet.RequestServlet</servlet-class>
+    <init-param>
+      <param-name>facebook_urlAuthorize_base</param-name>
+      <param-value>https://graph.facebook.com/oauth/authorize</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_urlGetToken_base</param-name>
+      <param-value>https://graph.facebook.com/oauth/access_token</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_AppID</param-name>
+      <param-value>1735266373441666</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_AppSecret</param-name>
+      <param-value>4ea358d19b3d487bef11c20aa2559339</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestServlet</servlet-name>
+    <url-pattern>/RequestServletUrlPath</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>GetToken</servlet-name>
+    <servlet-class>com.bhaskerStreet.GetToken</servlet-class>
+    <init-param>
+      <param-name>facebook_urlAuthorize_base</param-name>
+      <param-value>https://graph.facebook.com/oauth/authorize</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_urlGetToken_base</param-name>
+      <param-value>https://graph.facebook.com/oauth/access_token</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_AppID</param-name>
+      <param-value>1735266373441666</param-value>
+    </init-param>
+    <init-param>
+      <param-name>facebook_AppSecret</param-name>
+      <param-value>4ea358d19b3d487bef11c20aa2559339</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GetToken</servlet-name>
+    <url-pattern>/GetTokenUrlPath</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>APIcalls</servlet-name>
+    <jsp-file>/APIcalls.jsp</jsp-file>
+    <init-param>
+        <param-name>facebook_endPoint_Url</param-name>  
+        <param-value>https://graph.facebook.com/v2.10/me</param-value>  
+    </init-param>
+</servlet>
+<servlet-mapping>  
+    <servlet-name>APIcalls</servlet-name>  
+    <url-pattern>/APIcalls.jsp</url-pattern>  
+</servlet-mapping> 
+  
+</web-app>
