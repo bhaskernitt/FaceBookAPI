@@ -17,11 +17,11 @@
     </init-param>
     <init-param>
       <param-name>facebook_AppID</param-name>
-      <param-value>1735266373441666</param-value>
+      <param-value>${facebook_AppID replace with original}</param-value>
     </init-param>
     <init-param>
       <param-name>facebook_AppSecret</param-name>
-      <param-value>4ea358d19b3d487bef11c20aa2559339</param-value>
+      <param-value>${replaced with original}</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
